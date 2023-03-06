@@ -146,7 +146,7 @@ class Git:
             return self.git_root
         except Exception as ex:
             print(f"There was an error finding the root git repository, please specify a path within the yaml file. For more information, see Vault Path Templating: https://github.com/Just-Insane/helm-vault#vault-path-templating")
-            return self.git_root
+            return "."
 
 class Envs:
     def __init__(self, args):
