@@ -254,7 +254,7 @@ class Vault:
         try:
             if self.args.verbose is True:
                 print(f"Using KV Version: {self.kvversion}")
-                print(f"Attempting to write to url: {self.envs.vault_addr}/v1/{mount_point}/data{_path}")
+                print(f"Attempting to read from url: {self.envs.vault_addr}/v1/{mount_point}/data{_path}")
             if self.kvversion in ['v1', 'v2']:
                 if self.kvversion == "v1":
                     value = self.client.read(_path)
